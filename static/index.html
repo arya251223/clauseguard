@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClauseGuard: contract risk review</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M8 16h5" stroke="#b42318" stroke-width="2" stroke-linecap="round"/></svg><span>ClauseGuard</span></div>
+  <div id="engine" class="pill" role="status">checking engine…</div>
+</header>
+
+<main>
+  <section id="intro" class="intro">
+    <div class="intro-copy">
+      <h1>Know what you're signing before you sign it.</h1>
+      <p>Upload a contract as a PDF. ClauseGuard finds risky clauses, highlights the exact words that triggered each flag, and proposes safer wording you can send back.</p>
+      <ul class="facts">
+        <li>Every flag is traceable to a phrase in your document</li>
+        <li>Works offline with rules; Gemini adds tailored rewrites</li>
+        <li>Uploaded files are deleted as soon as the review finishes</li>
+      </ul>
+    </div>
+    <div class="intro-act">
+      <label id="drop" class="drop" tabindex="0">
+        <input id="file" type="file" accept="application/pdf,.pdf" hidden>
+        <strong>Drop a contract PDF here</strong>
+        <span>or click to choose a file. Up to 10 MB, text-based PDFs.</span>
+      </label>
+      <div class="row">
+        <label class="sel">Engine
+          <select id="engineSel">
+            <option value="auto">Automatic</option>
+            <option value="rules">Rules only</option>
+            <option value="gemini">Rules + Gemini</option>
+          </select>
+        </label>
+        <button id="sampleBtn" class="btn ghost" type="button">Review the sample contract</button>
+      </div>
+      <p id="msg" class="msg" role="alert" hidden></p>
+    </div>
+  </section>
+
+  <section id="busy" class="busy" hidden><div class="spin"></div><p>Reading the contract and checking each clause…</p></section>
+
+  <section id="result" hidden>
+    <div class="summary">
+      <div class="score" id="scoreBox"><b id="scoreNum">0</b><span id="scoreLabel"></span></div>
+      <div class="sum-text">
+        <h2 id="docName"></h2>
+        <p id="sumText"></p>
+        <p class="meta" id="meta"></p>
+        <div class="actions">
+          <a class="btn" id="dlMd" href="#">Download report (.md)</a>
+          <button class="btn ghost" id="dlJson" type="button">Download JSON</button>
+          <button class="btn ghost" id="print" type="button">Print</button>
+          <button class="btn ghost" id="again" type="button">Review another</button>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec">Contract map</h3>
+    <p class="hint">Each block is a clause, sized by length. Select one to jump to it.</p>
+    <div id="map" class="map" role="list"></div>
+    <div class="legend"><i class="k HIGH"></i>High <i class="k MEDIUM"></i>Medium <i class="k LOW"></i>Low <i class="k NONE"></i>No finding</div>
+
+    <div id="gapsWrap" hidden>
+      <h3 class="sec">Missing protections</h3>
+      <div id="gaps"></div>
+    </div>
+
+    <div class="filters">
+      <h3 class="sec">Findings <span id="count"></span></h3>
+      <div class="chips" id="chips" role="group" aria-label="Filter by risk"></div>
+      <label class="sel">Category <select id="catSel"></select></label>
+    </div>
+    <div id="findings"></div>
+  </section>
+</main>
+<footer>Automated screening to support review. It is not legal advice.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

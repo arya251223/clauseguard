@@ -1,0 +1,299 @@
+{
+  "document_name": "safe_contract.pdf",
+  "pages": 1,
+  "total_clauses_analyzed": 10,
+  "clauses_with_findings": 9,
+  "overall": {
+    "score": 3,
+    "label": "SAFE"
+  },
+  "overall_risk_score": "SAFE",
+  "high_risk_count": 0,
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 10
+  },
+  "engine": "rules",
+  "engine_note": null,
+  "pdf_backend": "pdfplumber",
+  "categories": [
+    "Confidentiality",
+    "Disputes & governing law",
+    "Indemnification",
+    "Intellectual property",
+    "Limitation of liability",
+    "Payment & penalties",
+    "Termination",
+    "Unilateral changes",
+    "Warranties & disclaimers"
+  ],
+  "clause_map": [
+    {
+      "id": 0,
+      "heading": "1. Services",
+      "page": 1,
+      "risk": "NONE"
+    },
+    {
+      "id": 1,
+      "heading": "2. Fees and Payment",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 2,
+      "heading": "3. Term and Termination",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 3,
+      "heading": "4. Intellectual Property",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 4,
+      "heading": "5. Confidentiality",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 5,
+      "heading": "6. Indemnification",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 6,
+      "heading": "7. Limitation of Liability",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 7,
+      "heading": "8. Warranties",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 8,
+      "heading": "9. Governing Law and Disputes",
+      "page": 1,
+      "risk": "LOW"
+    },
+    {
+      "id": 9,
+      "heading": "10. Amendments",
+      "page": 1,
+      "risk": "LOW"
+    }
+  ],
+  "findings": [
+    {
+      "clause_id": 5,
+      "heading": "6. Indemnification",
+      "page": 1,
+      "category": "Limitation of liability",
+      "risk": "LOW",
+      "score": 5,
+      "explanation": "A limitation-of-liability clause decides how much either side can recover when things go wrong. Missing caps, one-way protection or carve-outs for serious misconduct create open-ended exposure. Reduced by: applies to both parties.",
+      "suggested_revision": "Add a mutual cap (for example, fees paid in the prior 12 months), keep carve-outs for fraud, gross negligence and wilful misconduct, and make the exclusion of indirect damages apply to both parties.",
+      "text": "6. Indemnification Each party shall indemnify the other against third-party claims to the extent caused by its own breach or negligence. Indemnity obligations are subject to the limitation of liability in this Agreement.",
+      "triggers": [],
+      "mitigations": [
+        "applies to both parties"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 1,
+      "heading": "2. Fees and Payment",
+      "page": 1,
+      "category": "Payment & penalties",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Payment terms drive cash flow and cost. High late-payment interest, acceleration and set-off rights can quickly turn a small delay into a large bill. Reduced by: right to dispute invoices; standard payment window.",
+      "suggested_revision": "Cap late interest at a modest annual rate, allow good-faith invoice disputes without penalty, move to net-30 terms, and remove acceleration and unilateral set-off rights.",
+      "text": "2. Fees and Payment Client will pay undisputed invoices within net 30 days. Client may dispute any invoice in good faith by written notice and need pay only the undisputed portion while the dispute is resolved.",
+      "triggers": [],
+      "mitigations": [
+        "right to dispute invoices",
+        "standard payment window"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 2,
+      "heading": "3. Term and Termination",
+      "page": 1,
+      "category": "Termination",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Termination terms decide how and when each side can exit and what it costs. One-sided exits, fees or missing cure periods are a common source of disputes. Reduced by: right is mutual; refund of unused fees.",
+      "suggested_revision": "Make termination rights mutual, add a 30-day written cure period for breaches, and provide a pro-rata refund of prepaid fees when you terminate for the other party's breach.",
+      "text": "3. Term and Termination Either party may terminate this Agreement on thirty (30) days' written notice. Either party may terminate for material breach if the breach is not cured within thirty (30) days of notice. Client will pay a pro-rata refund of prepaid fees for services not performed.",
+      "triggers": [],
+      "mitigations": [
+        "right is mutual",
+        "refund of unused fees"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 3,
+      "heading": "4. Intellectual Property",
+      "page": 1,
+      "category": "Intellectual property",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "IP clauses decide who owns what is created. Assigning pre-existing or unrelated IP can hand over tools and know-how you rely on for other clients. Reduced by: your pre-existing IP is carved out; you retain ownership or a licence-back.",
+      "suggested_revision": "Limit assignment to deliverables created specifically for this engagement and paid for in full, expressly exclude each party's background IP, and grant a licence-back for reusable tools and know-how.",
+      "text": "4. Intellectual Property Consultant retains all ownership of its background intellectual property and pre-existing tools, which remain excluded from this Agreement. Client owns the deliverables created specifically for Client once paid for in full.",
+      "triggers": [],
+      "mitigations": [
+        "your pre-existing IP is carved out",
+        "you retain ownership or a licence-back"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 4,
+      "heading": "5. Confidentiality",
+      "page": 1,
+      "category": "Confidentiality",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Confidentiality terms govern what you may share and for how long. Perpetual, one-way or exclusion-free obligations are hard to comply with. Reduced by: standard exclusions present; fixed confidentiality period; mutual obligation.",
+      "suggested_revision": "Make obligations mutual, add standard exclusions (public, independently developed, already known, legally compelled), and limit the term to 3-5 years after termination, except for trade secrets.",
+      "text": "5. Confidentiality Each party shall keep the other party's confidential information confidential for three years after termination. This obligation does not apply to information that is publicly available, independently developed or required by law to be disclosed.",
+      "triggers": [],
+      "mitigations": [
+        "standard exclusions present",
+        "fixed confidentiality period",
+        "mutual obligation"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 5,
+      "heading": "6. Indemnification",
+      "page": 1,
+      "category": "Indemnification",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Indemnification shifts the cost of third-party claims between the parties. Broad or one-sided wording can make you pay for losses you did not cause. Reduced by: mutual indemnity; limited to the extent of the indemnitor's fault; indemnity is capped.",
+      "suggested_revision": "Make the indemnity mutual, limit it to losses \"to the extent caused by\" the indemnifying party's breach or negligence, exclude the other party's own negligence, and subject it to the liability cap in this agreement.",
+      "text": "6. Indemnification Each party shall indemnify the other against third-party claims to the extent caused by its own breach or negligence. Indemnity obligations are subject to the limitation of liability in this Agreement.",
+      "triggers": [],
+      "mitigations": [
+        "mutual indemnity",
+        "limited to the extent of the indemnitor's fault",
+        "indemnity is capped"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 6,
+      "heading": "7. Limitation of Liability",
+      "page": 1,
+      "category": "Limitation of liability",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "A limitation-of-liability clause decides how much either side can recover when things go wrong. Missing caps, one-way protection or carve-outs for serious misconduct create open-ended exposure. Reduced by: liability cap tied to fees; applies to both parties.",
+      "suggested_revision": "Add a mutual cap (for example, fees paid in the prior 12 months), keep carve-outs for fraud, gross negligence and wilful misconduct, and make the exclusion of indirect damages apply to both parties.",
+      "text": "7. Limitation of Liability Neither party's aggregate liability shall exceed the fees paid or payable in the twelve months before the claim. Neither party is liable for consequential damages, except for fraud or willful misconduct.",
+      "triggers": [],
+      "mitigations": [
+        "liability cap tied to fees",
+        "applies to both parties"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 7,
+      "heading": "8. Warranties",
+      "page": 1,
+      "category": "Warranties & disclaimers",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Warranty disclaimers remove your recourse when deliverables or services do not work as promised. Reduced by: affirmative warranties given; remedy for defects.",
+      "suggested_revision": "Require express warranties that services will be performed professionally and deliverables will conform to the specification, with a repair, re-performance or refund remedy.",
+      "text": "8. Warranties Consultant warrants that the services will be performed in a professional manner. Consultant will re-perform any non-conforming services at no charge.",
+      "triggers": [],
+      "mitigations": [
+        "affirmative warranties given",
+        "remedy for defects"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 8,
+      "heading": "9. Governing Law and Disputes",
+      "page": 1,
+      "category": "Disputes & governing law",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "Dispute clauses decide where, how and at whose expense disagreements are resolved. Waivers and distant exclusive venues can make it impractical to enforce your rights. Reduced by: costs are shared; recognised neutral arbitral body.",
+      "suggested_revision": "Choose a neutral venue and recognised arbitral institution, split costs equally, avoid blanket waivers of statutory rights, and allow court action for injunctive relief.",
+      "text": "9. Governing Law and Disputes This Agreement is governed by the laws of England and Wales. Disputes will be resolved by arbitration under ICC rules and each party shall bear its own costs.",
+      "triggers": [],
+      "mitigations": [
+        "costs are shared",
+        "recognised neutral arbitral body"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    },
+    {
+      "clause_id": 9,
+      "heading": "10. Amendments",
+      "page": 1,
+      "category": "Unilateral changes",
+      "risk": "LOW",
+      "score": 0,
+      "explanation": "A clause that lets one side change the contract alone means you can be bound by terms you never agreed to. Reduced by: changes need both parties' signature.",
+      "suggested_revision": "Require every amendment to be in writing and signed by both parties; if a unilateral change is unavoidable, require 30 days' prior notice and a right to terminate without penalty.",
+      "text": "10. Amendments Any amendment must be a written agreement signed by both parties.",
+      "triggers": [],
+      "mitigations": [
+        "changes need both parties' signature"
+      ],
+      "highlights": [],
+      "source": "rules",
+      "llm_risk": null,
+      "disagreement": false
+    }
+  ],
+  "gaps": [],
+  "summary": "10 clauses across 1 pages were screened; 0 high, 0 medium and 10 low-risk findings.",
+  "duration_ms": 51.2,
+  "id": "00000000000000000000000000000000"
+}
