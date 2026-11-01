@@ -160,6 +160,10 @@ OCR for scans, side selection (client or vendor), DOCX input, custom rule packs 
 
 MIT
 
+
+
+## Author
+
 **Aryan**
 
 - GitHub: [@arya251223](https://github.com/arya251223)
