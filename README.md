@@ -159,3 +159,13 @@ OCR for scans, side selection (client or vendor), DOCX input, custom rule packs 
 ## License
 
 MIT
+
+**Aryan**
+
+- GitHub: [@arya251223](https://github.com/arya251223)
+- Portfolio: [aryan-2512.netlify.app](https://aryan-2512.netlify.app)
+- Email: [aryan.carrer@gmail.com](mailto:aryan.carrer@gmail.com)
+
+---
+
+*Developed with care by Aryan.*
